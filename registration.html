@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Registration Form</title>
+	<link rel="stylesheet" type="text/css" href="register.css">
+</head>
+<body>
+	<div class="title">
+		<span>Registration Form</span>
+	</div>
+ <div>
+	<div class="input_field">
+		<label>First Name:</label>
+		<input type="text" class="input"  id = "f2">
+	</div>
+	<div class="input_field">
+		<label>Last Name:</label>
+		<input type="text" class="input"  id = "f3">
+	</div>
+	<div class="input_field">
+		<label >Password</label>
+		<input type="text" class="input" id = "f4">
+	</div>
+	<div class="input_field">
+		<label>Confirm Password</label>
+		<input type="text" class="input"  id = "f5">
+	</div>
+	<!-- <div class="input_field">
+		<label>Gender</label>
+		<div class="custom_select">
+			<select id="f6">
+				<option value="other">Select</option>
+				<option value="male" >Male</option>
+				<option value="female" >Female</option>
+			</select>
+		</div>
+	</div> -->
+    <div class="input_field">
+    	<label >Email Address:</label>
+    	<input type="text" name="input" id = "f7">
+    </div>
+    <div class="input_field">
+    	<label >Phone Number</label>
+    	<input type="text" class="input" id = "f8">
+    </div>
+	<div class="input_field">
+    	<label>city:</label>
+    	<input class="input" id="f10"></input>
+    </div>
+	<div class="input_field">
+		<label>state:</label>
+		<input class="input" id="f11"></input>
+	</div>
+	<div class="input_field">
+		<label>Strength:</label>
+		<input class="input" id="f12"></input>
+	</div>
+    <div class="input_field">
+    	<label>Address</label>
+    	<textarea class="textarea" id="f9"></textarea>
+    </div>
+    <div class="input_field_terms">
+    	<label class="check">
+    		<input type="checkbox">
+    		<span class="checkmark"></span>
+    	</label>
+    	<p>Agreed to terms and conditions</p>
+    </div>
+    <div class="input_field">
+    	<input type="submit" name="Register" class="btn" id="submitForm" onclick="saveFile()">
+    </div>
+	<div class="input_field">
+    	<a href="./main.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i
+			class="fa fa-th-large fa-fw w3-margin-right"></i>Back to homepage</a>
+    </div>
+</div>
+</body>
+</html>
+<script type = "text/javascript" src="./mainFunctions.js"></script>  
+<script>
+	let saveFile = () => { 
+		let newArray = []
+		const fname= document.getElementById('f2');
+        const lname = document.getElementById('f3');
+        const email = document.getElementById('f7');
+        // const gender = document.getElementById('f6');
+		const phno = document.getElementById('f8');
+		const city=document.getElementById('f10');
+		const state=document.getElementById('f11');
+		const strength=document.getElementById('f12');
+		const address = document.getElementById('f9');
+
+		let data = {
+			name : fname.value+" "+lname.value,
+			email : email.value,
+			// gender : gender.value,
+			phno: phno.value,
+			city:city.value,
+			state:state.value,
+			strength:strength.value,
+			address : address.value
+		}
+		console.log('hai');
+		newArray.push(data)
+		console.log('array',newArray)
+		let saveResponse = saveData(newArray)
+		alert('form submitted successfully!')
+		window.location.href="./main.html";
+	}
+</script>

@@ -1,0 +1,75 @@
+
+body{
+max-width: 100%;
+
+}
+.container
+{
+  background:url("wastefood.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+  height: 800px;
+}
+.img-thumbnail
+{
+  width: 60px;
+  border-radius: 27px;
+  height: 60px;
+  width: 60px;
+
+}
+p{
+  color: white;
+  position: relative;
+  top: 20px;
+  left: 20px;
+}
+.btn
+{
+  margin: 10px;
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0px;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+/* nav
+{
+  position:fixed;
+  top: 0px;
+  width: 100%;
+} */
+nav{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+footer{
+  background-color: black;
+  width: 100%;
+  padding-left:10px;
+}
+footer.col{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+ footer div img
+{
+  border-radius: 25%;
+  height:100px;
+  width: 100px;
+}
+.section-p1
+{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+footer div  i{
+  color:white;
+  padding-right:4px;
+  cursor:pointer;
+} 

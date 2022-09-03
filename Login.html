@@ -1,0 +1,38 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title>Login</title>
+	<link rel="stylesheet" type="text/css" href="log.css">
+</head>
+<body>
+	<div class="loginbox">
+		<img src="log.jpg " class="wastowealth">
+		<h1>login here</h1>
+			<p>Username</p>
+			<input type="text" name="" placeholder="Enter Username" id = "email">
+			<p>Password</p>
+			<input type="password" name="" placeholder="Enter password" id = "password">
+			<input type="submit" name="" value="login" onclick="saveFile()">
+			<a href="./registration.html">Don't have an account?</a>
+		
+	</div>
+</body>
+</html>
+<script  type = "text/javascript" src="./mainFunctions.js"></script>
+<script>
+	let saveFile = () => { 
+		let email = document.getElementById("email")
+		let password = document.getElementById("password")
+		let data = {
+			email : email.value,
+			password : password.value
+		}
+		console.log('data---------',data)
+		let response = loginData(data)
+		if(response.length === 0 ){
+			alert('please check credentials again!')
+		}else {
+			window.location.href="./main.html";
+		}
+	}
+</script>
